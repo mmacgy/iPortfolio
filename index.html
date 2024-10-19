@@ -57,6 +57,12 @@
         linear-gradient(-45deg, transparent 75%, var(--primary-color) 75%);
       background-size: 20px 20px;
       opacity: 0.05;
+      animation: backgroundScroll 20s linear infinite;
+    }
+
+    @keyframes backgroundScroll {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
     }
 
     .hero-content {
@@ -67,6 +73,12 @@
       background: rgba(26, 26, 46, 0.8);
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(0, 255, 170, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .hero-content:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0, 255, 170, 0.4);
     }
 
     .hero h2 {
@@ -275,14 +287,11 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/portfolio/bgprofile.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="hero-content container" data-aos="fade-up" data-aos-delay="100">
         <h2>Thaninchote Opaspeerawit</h2>
-        <p>I'm a <span class="typed" data-typed-items="Undergraduate Student, Unreal Engine Developer, 3D Environment Artist, Editor "></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p>I'm a <span class="typed" data-typed-items="Undergraduate Student, Unreal Engine Developer, 3D Environment Artist, Editor"></span></p>
+        <a href="#portfolio" class="btn-custom">View My Work</a>
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
